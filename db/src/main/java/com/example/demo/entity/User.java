@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 import lombok.NoArgsConstructor;
-@NoArgsConstructor
+//@NoArgsConstructor
 public class User {
     public String getId() {
         return id;
