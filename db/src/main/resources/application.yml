@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+mybatis:
+  #typeAliasesPackage: org.spring.springboot.domain
+  mapper-locations: classpath*:sql/*.xml
+
