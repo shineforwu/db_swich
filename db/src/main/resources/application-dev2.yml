@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    db1:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initialize: true #指定初始化数据源，是否用data.sql来初始化，默认: true
+      name: cmmi
+      url: jdbc:mysql://127.0.0.1:3306/user1?serverTimezone=GMT%2B8
+      username: root
+      password: 123456
+    db2:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initialize: true
+      name: zentaopro
+      url: jdbc:mysql://127.0.0.1:3306/user2?serverTimezone=GMT%2B8
+      username: root
+      password: 123456
+    defaultTargetDataSource: db1

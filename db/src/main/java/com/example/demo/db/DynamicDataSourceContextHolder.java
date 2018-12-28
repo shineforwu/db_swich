@@ -47,7 +47,7 @@ public class DynamicDataSourceContextHolder {
      * Use master data source.
      */
     public static void useMasterDataSource() {
-        CONTEXT_HOLDER.set(DataSourceKey.db1.toString());
+        CONTEXT_HOLDER.set("db1");
     }
     /**
      * 当使用只读数据源时通过轮循方式选择要使用的数据源
