@@ -11,11 +11,10 @@ import javax.sql.DataSource;
 @SpringBootApplication
 public class DemoApplication {
 
-    @Autowired
-    public static DataSource  dataSource;
+
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
-        System.out.println("DATASOURCE = " + dataSource);
+        //System.out.println("DATASOURCE = " + dataSource);
     }
 
 }

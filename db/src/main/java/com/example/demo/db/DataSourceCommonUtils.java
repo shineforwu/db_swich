@@ -15,10 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 public class DataSourceCommonUtils {
-    @Resource
-    private SqlSessionFactoryBean sqlSessionFactoryBean;
-    @Resource
-    private SqlSessionFactory sqlSessionFactory;
+
 
 
     public static  List<MyDataSource> getDataSourceList() {
@@ -37,7 +34,7 @@ public class DataSourceCommonUtils {
         dataSource.setDriverClassName(myDataSource.getDriverClassName());
         dataSource.setUsername(myDataSource.getUserName());
         dataSource.setPassword(myDataSource.getPassword());
-
+        dataSource.setUrl(myDataSource.getUrl());
         //configuration
         dataSource.setInitialSize(1);
         dataSource.setMinIdle(2);
@@ -92,25 +89,5 @@ public class DataSourceCommonUtils {
 
     }
 
-//    public  void changeDataSource(MyDataSource myDataSource)
-//    {
-//        DataSource dataSource =getDataSource(myDataSource);
-//        //---------------------修改mybatis的数据源-----------------------
-//        //修改MyBatis的数据源
-//        //SqlSessionFactoryBean sqlSessionFactoryBean = (SqlSessionFactoryBean)SpringContextUtil.getBean(SqlSessionFactoryBean.class);
-//        try {
-//
-//            SqlSessionFactory ssf=sqlSessionFactory;
-//            Environment environment = sqlSessionFactoryBean.getObject().getConfiguration().getEnvironment();
-//            Field dataSourceField = environment.getClass().getDeclaredField("dataSource");
-//            dataSourceField.setAccessible(true);//跳过检查
-//            dataSourceField.set(environment,dataSource);//修改mybatis的数据源
-//        }
-//        catch (Exception ex)
-//        {
-//            System.out.print("changeDataSource: "+ex.toString());
-//        }
-//
-//
-//    }
+
 }
